@@ -169,7 +169,7 @@ export default function SolutionPage() {
 
       <Separator className="my-16" />
 
-      <h2 className="text-2xl font-medium tracking-tight">
+      <h2 id="poc" className="text-2xl font-medium tracking-tight scroll-mt-20">
         Proof of concept: an RC-scale testbed
       </h2>
       <p className="mt-4 max-w-2xl text-muted-foreground">
@@ -178,19 +178,33 @@ export default function SolutionPage() {
         a remote-controlled car scaled down to the same proportions, which
         lets us iterate quickly on:
       </p>
-      <figure className="mt-6 max-w-md">
-        <Image
-          src="/images/poc-concept.png"
-          alt="Concept render of the RC-scale testbed: a rock-crawler chassis with a spinning lidar unit and a Jetson-class edge compute module mounted on a carbon-fiber plate."
-          width={1376}
-          height={768}
-          className="w-full rounded-lg border"
-        />
-        <figcaption className="mt-2 text-xs text-muted-foreground">
-          Concept render — design reference for the build, not a photo of a
-          finished unit.
-        </figcaption>
-      </figure>
+      <div className="mt-6 grid max-w-3xl gap-6 sm:grid-cols-2">
+        <figure>
+          <Image
+            src="/images/poc-concept.png"
+            alt="Concept render of the RC-scale testbed: a rock-crawler chassis with a spinning lidar unit and a Jetson-class edge compute module mounted on a carbon-fiber plate."
+            width={1376}
+            height={768}
+            className="w-full rounded-lg border"
+          />
+          <figcaption className="mt-2 text-xs text-muted-foreground">
+            Design reference — annotated concept render.
+          </figcaption>
+        </figure>
+        <figure>
+          <Image
+            src="/images/zeropilot_concept_01.png"
+            alt="ZeroPilot PoC hardware concept on an RC rock-crawler chassis: spinning lidar at the front, stereo depth cameras, Jetson-class edge compute, GPS antenna, and a rear display showing lane perception."
+            width={1258}
+            height={848}
+            className="w-full rounded-lg border"
+          />
+          <figcaption className="mt-2 text-xs text-muted-foreground">
+            Hardware concept — sensor layout and on-board compute as we are
+            building it. Concept visualization, not a finished unit.
+          </figcaption>
+        </figure>
+      </div>
       <ul className="mt-4 max-w-2xl list-disc space-y-2 pl-6 text-sm text-muted-foreground">
         <li>Detection accuracy in dust, glare, and low light.</li>
         <li>

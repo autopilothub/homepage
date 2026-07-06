@@ -30,6 +30,16 @@ const LEDGER = [
     description:
       "A rock-crawler RC chassis carrying a spinning lidar and a Jetson-class edge compute unit. This is a design concept, not a built or tested unit yet.",
     image: "/images/poc-concept.png" as const,
+    imageCaption: "Concept render, not a photo of a finished unit.",
+  },
+  {
+    date: "2026-07-06",
+    status: "logged" as const,
+    title: "ZeroPilot PoC hardware concept visualized",
+    description:
+      "Sensor layout refined: front-mounted spinning lidar, stereo depth cameras, Jetson-class edge compute on an acrylic deck, GPS antenna, and a rear display for live perception output. Still a concept visualization — build and bench testing are next.",
+    image: "/images/zeropilot_concept_01.png" as const,
+    imageCaption: "Hardware concept visualization, not a finished unit.",
   },
   {
     date: "2026-06-20",
@@ -58,6 +68,7 @@ const LEDGER = [
   title: string;
   description: string;
   image?: string;
+  imageCaption?: string;
 }>;
 
 export default function ProofPage() {
@@ -104,7 +115,8 @@ export default function ProofPage() {
                     className="w-full rounded-lg border"
                   />
                   <figcaption className="mt-1 text-xs">
-                    Concept render, not a photo of a finished unit.
+                    {entry.imageCaption ??
+                      "Concept render, not a photo of a finished unit."}
                   </figcaption>
                 </figure>
               )}

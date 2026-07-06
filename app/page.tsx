@@ -101,31 +101,44 @@ export default function Home() {
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-6 py-16">
-        <Card className="border-dashed">
-          <CardContent className="flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:justify-between">
-            <div>
+        <Card className="border-dashed overflow-hidden">
+          <CardContent className="flex flex-col gap-8 py-8 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex-1">
               <h2 className="text-xl font-semibold tracking-tight">
                 Currently validating with an RC-scale testbed
               </h2>
               <p className="mt-1 max-w-xl text-sm text-muted-foreground">
                 Before mounting hardware on real machines, we are proving out
-                the perception stack on a low-cost RC-car platform.
+                the perception stack on a low-cost RC-car platform — lidar,
+                stereo cameras, and edge compute on a rock-crawler chassis.
               </p>
+              <div className="mt-6 flex shrink-0 gap-3">
+                <Link
+                  href="/proof"
+                  className="inline-flex h-10 items-center rounded-md border px-5 text-sm font-medium transition-colors hover:bg-accent"
+                >
+                  Proof Ledger
+                </Link>
+                <Link
+                  href="/solution#poc"
+                  className="inline-flex h-10 items-center rounded-md border px-5 text-sm font-medium transition-colors hover:bg-accent"
+                >
+                  See the PoC
+                </Link>
+              </div>
             </div>
-            <div className="flex shrink-0 gap-3">
-              <Link
-                href="/proof"
-                className="inline-flex h-10 items-center rounded-md border px-5 text-sm font-medium transition-colors hover:bg-accent"
-              >
-                Proof Ledger
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex h-10 items-center rounded-md border px-5 text-sm font-medium transition-colors hover:bg-accent"
-              >
-                Read our story
-              </Link>
-            </div>
+            <figure className="shrink-0 lg:max-w-sm">
+              <Image
+                src="/images/zeropilot_concept_01.png"
+                alt="ZeroPilot PoC hardware concept: an RC rock-crawler with lidar, stereo cameras, Jetson-class edge compute, and a rear perception display."
+                width={1258}
+                height={848}
+                className="w-full rounded-lg border"
+              />
+              <figcaption className="mt-2 text-xs text-muted-foreground">
+                PoC hardware concept — not a finished unit
+              </figcaption>
+            </figure>
           </CardContent>
         </Card>
       </section>
