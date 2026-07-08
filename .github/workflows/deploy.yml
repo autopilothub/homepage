@@ -13,13 +13,12 @@ on:
 env:
   IMAGE_NAME: ghcr.io/autopilothub/homepage
 
-permissions:
-  contents: write
-  packages: write
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
     outputs:
       digest: ${{ steps.build.outputs.digest }}
     steps:
