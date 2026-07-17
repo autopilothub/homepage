@@ -7,4 +7,4 @@ resources:
 - service.yaml
 images:
 - name: ghcr.io/autopilothub/homepage
-  newTag: sha-1f4fefa0bb869ac9fd908a12a5a5edc4b9b794c9
+  newTag: sha-95657506b3e80e60ff8d9c20097a64603008a4a2
